@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from tracemalloc import start
 import scrapy
+import random
+
 #import logging
 
 class AaidSpider(scrapy.Spider):
-    name = 'aaid'
+    name = 'a'
     # start_urls = ['http://x.com/']
    
     
@@ -14,7 +16,7 @@ class AaidSpider(scrapy.Spider):
         pass
     def start_requests(self):
 
-        url = "https://www.booking.com/hotel/ca/kimbrook-lodge.en-gb.html"
+        url = "https://www.booking.com/hotel/ca/kimbrook-lodge.en-gb.html"+ "?dummy=" + str(random.random())
         cookies = {
     '_pxhd': '9ije37phpJKAjLdTaWRO-lTbP%2FbQEVG-rZLlYKUd6NyCI2sQBlCX46MWmUwhnSuiGbzuOcRsPoHBkJfgl4jQyQ%3D%3D%3ADKxEp3jEeypBXeHpCfyz3GIoHxsLSlEoKLwZ%2FbIGfXH9Ye1io%2FRbBxMpvnUeQ54GVcdK3FzYBu5q33fbpBhFHUvvU1qBEjl%2FkFr0Cz3A33s%3D',
     'cors_js': '1',
@@ -65,18 +67,32 @@ class AaidSpider(scrapy.Spider):
         'sec-ch-ua-platform': '"Windows"',
     }       
         self.logger.info('test4')
-        yield scrapy.http.Request(url, method='GET' , headers = headers, cookies = cookies,)
+        r= scrapy.http.Request(url, method='GET' , headers = headers, cookies = cookies,)
+        r.meta['dont_cache'] = True
+        yield r
         
 
     def parse(self, response):
 
         # Set the headers here. 
-        
-        s = '#rooms_table > div:nth-child(3) > div > section > div'
-        print(response.css(s).getall(), file=open("output3.html", "w"))
-        # breakpoint()
-        for i in response.css(s)[1:]:
-            a=(i.css('span::text')[0].get())
-            yield { 'room': a}
-        
-    
+        print(response.body.decode(), file=open("output3.html", "w"))
+        if 0:
+            s = '#rooms_table > div:nth-child(3) > div > section > div'
+            for i in response.css(s)[1:]:
+                a=(i.css('span::text')[0].get())
+                yield { 'room': a}
+        else:
+            s2 = '.hprt-roomtype-link'
+            # breakpoint()
+            for i in response.css(s2)[:]:
+                a=(i.css('span::text')[0].get().strip())
+                yield { 'room': a}
+        # for i in response.css(s)[1:]:
+        #     o=i.css('div.ace2775fec::attr(aria-label)').get()
+        #     yield { 'max_occupancy': o}
+        s= '#hprt-table > tbody > tr.js-rt-block-row.e2e-hprt-table-row.hprt-table-cheapest-block.hprt-table-cheapest-block-fix.js-hprt-table-cheapest-block.hprt-table-last-row > td.hprt-table-cell.hprt-table-cell-occupancy.droom_seperator > div > div >  span.bui-u-sr-only::text'
+
+        #hprt-table > tbody > tr.js-rt-block-row.e2e-hprt-table-row.hprt-table-cheapest-block.hprt-table-cheapest-block-fix.js-hprt-table-cheapest-block.hprt-table-last-row > td.hprt-table-cell.hprt-table-cell-occupancy.droom_seperator > div > div > span.bui-u-sr-only
+        for i in response.css(s)[:]:o=i.get().strip();print(f'3{o}2')
+        breakpoint()
+            # yield { 'max_occupancy': o}
