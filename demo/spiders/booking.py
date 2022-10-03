@@ -109,17 +109,17 @@ class AaidSpider(scrapy.Spider):
 
         # Set the headers here. 
         print(response.body.decode(), file=open("output3.html", "w"))
-        if 0:
-            s = '#rooms_table > div:nth-child(3) > div > section > div'
-            for i in response.css(s)[1:]:
-                a=(i.css('span::text')[0].get())
-                yield { 'room': a}
-        else:
-            s2 = '.hprt-roomtype-link'
-            # breakpoint()
-            for i in response.css(s2)[:]:
-                a=(i.css('span::text')[0].get().strip())
-                yield { 'room': a}
+        # if 0:
+        #     s = '#rooms_table > div:nth-child(3) > div > section > div'
+        #     for i in response.css(s)[1:]:
+        #         a=(i.css('span::text')[0].get())
+        #         yield { 'room': a}
+        # else:
+        #     s2 = '.hprt-roomtype-link'
+        #     # breakpoint()
+        #     for i in response.css(s2)[:]:
+        #         a=(i.css('span::text')[0].get().strip())
+        #         yield { 'room': a}
         # for i in response.css(s)[1:]:
         #     o=i.css('div.ace2775fec::attr(aria-label)').get()
         #     yield { 'max_occupancy': o}
