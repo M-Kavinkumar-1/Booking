@@ -1,0 +1,21 @@
+[
+{"room": "Deluxe Queen Room", "maxoccupancy": "4 adults, 2 children", "price": null, "taxes": null},
+{"room": "Deluxe Single Room", "maxoccupancy": "1 adult, 1 child", "price": null, "taxes": null},
+{"room": "Family Suite", "maxoccupancy": "4 adults, 2 children", "price": null, "taxes": null},
+{"room": "One-Bedroom Apartment", "maxoccupancy": "4 adults, 2 children", "price": null, "taxes": null}
+][
+{"room": "Deluxe Queen Room", "\nmaxoccupancy": "4 adults, 2 children", "price": null, "taxes": null},
+{"room": "Deluxe Single Room", "\nmaxoccupancy": "1 adult, 1 child", "price": null, "taxes": null},
+{"room": "Family Suite", "\nmaxoccupancy": "4 adults, 2 children", "price": null, "taxes": null},
+{"room": "One-Bedroom Apartment", "\nmaxoccupancy": "4 adults, 2 children", "price": null, "taxes": null}
+][
+{"room": "Deluxe Queen Room", "maxoccupancy": "4 adults, 2 children", "price": null, "taxes": null},
+{"room": "Deluxe Single Room", "maxoccupancy": "1 adult, 1 child", "price": null, "taxes": null},
+{"room": "Family Suite", "maxoccupancy": "4 adults, 2 children", "price": null, "taxes": null},
+{"room": "One-Bedroom Apartment", "maxoccupancy": "4 adults, 2 children", "price": null, "taxes": null}
+][
+{"room": "Deluxe Queen Room", "maxoccupancy": "4 adults, 2 children", "price": null, "taxes": null},
+{"room": "Deluxe Single Room", "maxoccupancy": "1 adult, 1 child", "price": null, "taxes": null},
+{"room": "Family Suite", "maxoccupancy": "4 adults, 2 children", "price": null, "taxes": null},
+{"room": "One-Bedroom Apartment", "maxoccupancy": "4 adults, 2 children", "price": null, "taxes": null}
+]
