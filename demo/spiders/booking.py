@@ -94,5 +94,6 @@ class AaidSpider(scrapy.Spider):
 
         #hprt-table > tbody > tr.js-rt-block-row.e2e-hprt-table-row.hprt-table-cheapest-block.hprt-table-cheapest-block-fix.js-hprt-table-cheapest-block.hprt-table-last-row > td.hprt-table-cell.hprt-table-cell-occupancy.droom_seperator > div > div > span.bui-u-sr-only
         for i in response.css(s)[:]:o=i.get().strip();print(f'3{o}2')
-        breakpoint()
+        # breakpoint()
+        
             # yield { 'max_occupancy': o}
