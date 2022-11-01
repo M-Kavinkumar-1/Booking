@@ -1,0 +1,15 @@
+headers = {
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Connection': 'keep-alive',
+    'Referer': 'https://www.booking.com/hotel/ca/kimbrook-lodge.en-gb.html?aid=304142&label=gen173nr-1FCAsoJ0IOa2ltYnJvb2stbG9kZ2VICVgEaGyIAQGYAQm4ARfIAQzYAQHoAQH4AQKIAgGoAgO4AqGu1ZkGwAIB0gIkMTQyNTJmMTAtYjBhNy00YTDNEpUTHQoQUJMHLrErGJyHg89uy71MyuHB&sid=b0aeead7ef43aa19121bec2107fe17cc&checkin_month=10&checkin_monthday=4&checkin_year=2022&checkout_month=10&checkout_monthday=5&checkout_year=2022&dist=0&do_availability_check=1&group_adults=2&group_children=0&highlighted_blocks=415757601_297096113_0_1_0&hp_avform=1&hp_group_set=0&hp_sbox=1&no_rooms=1&origin=hp&sb_price_type=total&src=hotel&stay_on_hp=1&type=total&',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'same-origin',
+    'Sec-Fetch-User': '?1',
+    'Upgrade-Insecure-Requests': '1',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
+    'sec-ch-ua': '"Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+}
